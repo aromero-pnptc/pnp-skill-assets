@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact Cards Many — Playbook mockup</title>
+  <link rel="stylesheet" href="playbook.css">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { width: 100%; height: 100%; background: #2a2a2a; display: flex; align-items: center; justify-content: center; }
+    .viewer { width: 1920px; height: 1080px; transform-origin: center center; }
+
+    /* 3-column variant — add to playbook.css when needed */
+    .contacts--3col { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    @container contentzone (max-width: 1100px) {
+      .contacts--3col { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+    @container contentzone (max-width: 700px) {
+      .contacts--3col { grid-template-columns: 1fr; }
+    }
+
+    /* Compact card: rows sized by content, grid centred vertically */
+    .contacts--compact {
+      grid-auto-rows: auto !important;
+      align-content: center !important;
+      gap: 16px !important;
+    }
+
+    /* Compact card overrides — small square photo, tighter padding */
+    .contacts--compact .contact-card {
+      grid-template-columns: auto 1fr !important;
+      gap: 20px !important;
+      padding: 20px !important;
+      align-items: center !important;
+      max-height: none !important;
+    }
+    .contacts--compact .contact-card__photo {
+      width: 108px !important;
+      height: 108px !important;
+      aspect-ratio: 1 / 1 !important;
+      align-self: center !important;
+      border-radius: 12px !important;
+      flex-shrink: 0;
+      overflow: hidden;
+    }
+    .contacts--compact .contact-card__photo img {
+      object-fit: cover;
+      object-position: top center;
+    }
+    .contacts--compact .contact-card__info {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+    .contacts--compact .contact-card__name {
+      font-size: 20px !important;
+      font-weight: 700;
+      white-space: normal !important;
+      overflow: visible !important;
+      text-overflow: unset !important;
+      line-height: 1.2;
+      margin-bottom: 3px;
+      color: var(--pb-oxford-blue);
+    }
+    .contacts--compact .contact-card__role {
+      font-size: 14px !important;
+      color: var(--pb-fg-2);
+      margin-bottom: 2px;
+    }
+    .contacts--compact .contact-card__meta {
+      font-size: 12px !important;
+      color: var(--pb-fg-2);
+      margin-bottom: 10px;
+    }
+    .contacts--compact .contact-card__divider {
+      height: 1px;
+      background: #e8eaf0;
+      margin-bottom: 10px;
+    }
+    .contacts--compact .contact-card__email {
+      font-size: 15px !important;
+      font-weight: 700;
+      color: var(--pb-playbook-purple);
+      word-break: normal !important;
+      text-decoration: none;
+    }
+  </style>
+  <script>
+    function scale() {
+      const v = document.querySelector('.viewer');
+      v.style.transform = `scale(${Math.min(window.innerWidth/1920, window.innerHeight/1080)})`;
+    }
+    window.addEventListener('load', scale);
+    window.addEventListener('resize', scale);
+  </script>
+</head>
+<body>
+<div class="viewer">
+  <div class="slide">
+  <div class="slide__main">
+    <header class="slide__header">
+      <div class="slide__header-title">Innovation Review · FY26 Q2</div>
+      <div class="slide__header-meta">
+        <div class="slide__page-num">32 <span style="opacity:0.5">/ 42</span></div>
+        <div class="slide__logos">
+          <img src="https://cdn.jsdelivr.net/gh/aromero-pnptc/pnp-skill-assets@main/logos/pnp-logo.svg" height="18" alt="PNP" style="opacity:0.55">
+          <img src="https://cdn.jsdelivr.net/gh/aromero-pnptc/pnp-skill-assets@main/logos/playbook-logo.svg" height="18" alt="Playbook" style="opacity:0.55">
+        </div>
+      </div>
+    </header>
+    <div class="slide__title-zone">
+      <div class="slide__purple-bar"></div>
+      <h1 class="slide__title">Your extended team</h1>
+    </div>
+    <main class="slide__content">
+      <div class="content-zone">
+
+        <div class="contacts contacts--3col contacts--compact">
+
+          <!-- 1 -->
+          <article class="pb-card contact-card">
+            <div class="contact-card__photo">
+              <img src="https://cdn.jsdelivr.net/gh/aromero-pnptc/pnp-skill-assets@main/photos/people/placeholder/placeholder%20headshot.png" alt="">
+            </div>
+            <div class="contact-card__info">
+              <div class="contact-card__id">
+                <div class="contact-card__name">Alejandro Romero</div>
+                <div class="contact-card__role">Managing Director</div>
+                <div class="contact-card__meta">Silicon Valley</div>
+              </div>
+              <div class="contact-card__divider"></div>
+              <div class="contact-card__contact">
+                <a class="contact-card__email" href="mailto:a.romero@pnptc.com">a.romero@pnptc.com</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 2 -->
+          <article class="pb-card contact-card">
+            <div class="contact-card__photo">
+              <img src="https://cdn.jsdelivr.net/gh/aromero-pnptc/pnp-skill-assets@main/photos/people/placeholder/placeholder%20headshot.png" alt="">
+            </div>
+            <div class="contact-card__info">
+              <div class="contact-card__id">
+                <div class="contact-card__name">Kira Lund</div>
+                <div class="contact-card__role">Senior Associate</div>
+                <div class="contact-card__meta">Silicon Valley</div>
+              </div>
+              <div class="contact-card__divider"></div>
+              <div class="contact-card__contact">
+                <a class="contact-card__email" href="mailto:k.lund@pnptc.com">k.lund@pnptc.com</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 3 -->
+          <article class="pb-card contact-card">
+            <div class="contact-card__photo">
+              <img src="https://cdn.jsdelivr.net/gh/aromero-pnptc/pnp-skill-assets@main/photos/people/placeholder/placeholder%20headshot.png" alt="">
+            </div>
+            <div class="contact-card__info">
+              <div class="contact-card__id">
+                <div class="contact-card__name">Mateo Vargas</div>
+                <div class="contact-card__role">VP Partnerships</div>
+                <div class="contact-card__meta">Silicon Valley</div>
+              </div>
+              <div class="contact-card__divider"></div>
+              <div class="contact-card__contact">
+                <a class="contact-card__email" href="mailto:m.vargas@pnptc.com">m.vargas@pnptc.com</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 4 -->
+          <article class="pb-card contact-card">
+            <div class="contact-card__photo">
+              <img src="https://cdn.jsdelivr.net/gh/aromero-pnptc/pnp-skill-assets@main/photos/people/placeholder/placeholder%20headshot.png" alt="">
+            </div>
+            <div class="contact-card__info">
+              <div class="contact-card__id">
+                <div class="contact-card__name">Sophie Brandt</div>
+                <div class="contact-card__role">Program Manager</div>
+                <div class="contact-card__meta">Munich</div>
+              </div>
+              <div class="contact-card__divider"></div>
+              <div class="contact-card__contact">
+                <a class="contact-card__email" href="mailto:s.brandt@pnptc.com">s.brandt@pnptc.com</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 5 -->
+          <article class="pb-card contact-card">
+            <div class="contact-card__photo">
+              <img src="https://cdn.jsdelivr.net/gh/aromero-pnptc/pnp-skill-assets@main/photos/people/placeholder/placeholder%20headshot.png" alt="">
+            </div>
+            <div class="contact-card__info">
+              <div class="contact-card__id">
+                <div class="contact-card__name">Yuki Tanaka</div>
+                <div class="contact-card__role">Innovation Lead</div>
+                <div class="contact-card__meta">Tokyo</div>
+              </div>
+              <div class="contact-card__divider"></div>
+              <div class="contact-card__contact">
+                <a class="contact-card__email" href="mailto:y.tanaka@pnptc.com">y.tanaka@pnptc.com</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 6 -->
+          <article class="pb-card contact-card">
+            <div class="contact-card__photo">
+              <img src="https://cdn.jsdelivr.net/gh/aromero-pnptc/pnp-skill-assets@main/photos/people/placeholder/placeholder%20headshot.png" alt="">
+            </div>
+            <div class="contact-card__info">
+              <div class="contact-card__id">
+                <div class="contact-card__name">Laila Hassan</div>
+                <div class="contact-card__role">Venture Scout</div>
+                <div class="contact-card__meta">Dubai</div>
+              </div>
+              <div class="contact-card__divider"></div>
+              <div class="contact-card__contact">
+                <a class="contact-card__email" href="mailto:l.hassan@pnptc.com">l.hassan@pnptc.com</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 7 -->
+          <article class="pb-card contact-card">
+            <div class="contact-card__photo">
+              <img src="https://cdn.jsdelivr.net/gh/aromero-pnptc/pnp-skill-assets@main/photos/people/placeholder/placeholder%20headshot.png" alt="">
+            </div>
+            <div class="contact-card__info">
+              <div class="contact-card__id">
+                <div class="contact-card__name">Carlos Reyes</div>
+                <div class="contact-card__role">Associate</div>
+                <div class="contact-card__meta">Mexico City</div>
+              </div>
+              <div class="contact-card__divider"></div>
+              <div class="contact-card__contact">
+                <a class="contact-card__email" href="mailto:c.reyes@pnptc.com">c.reyes@pnptc.com</a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </main>
+  </div><!-- /slide__main -->
+  </div><!-- /slide -->
+</div>
+</body>
+</html>

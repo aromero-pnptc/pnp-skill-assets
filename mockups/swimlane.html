@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Swimlane — Playbook mockup</title>
+  <link rel="stylesheet" href="playbook.css">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { width: 100%; height: 100%; background: #2a2a2a; display: flex; align-items: center; justify-content: center; }
+    .viewer { width: 1920px; height: 1080px; transform-origin: center center; }
+  </style>
+  <script>
+    function scale() {
+      const v = document.querySelector('.viewer');
+      v.style.transform = `scale(${Math.min(window.innerWidth/1920, window.innerHeight/1080)})`;
+    }
+    window.addEventListener('load', scale);
+    window.addEventListener('resize', scale);
+  </script>
+</head>
+<body>
+<div class="viewer">
+  <div class="slide">
+  <div class="slide__main">
+    <header class="slide__header">
+      <div class="slide__header-title">Innovation Review · FY26 Q2</div>
+      <div class="slide__header-meta">
+        <div class="slide__page-num">28 <span style="opacity:0.5">/ 42</span></div>
+        <div class="slide__logos">
+          <img src="https://cdn.jsdelivr.net/gh/aromero-pnptc/pnp-skill-assets@main/logos/pnp-logo.svg" height="18" alt="PNP" style="opacity:0.55">
+          <img src="https://cdn.jsdelivr.net/gh/aromero-pnptc/pnp-skill-assets@main/logos/playbook-logo.svg" height="18" alt="Playbook" style="opacity:0.55">
+        </div>
+      </div>
+    </header>
+    <div class="slide__title-zone">
+      <div class="slide__purple-bar"></div>
+      <h1 class="slide__title">Innovation program · 12-month roadmap</h1>
+    </div>
+    <main class="slide__content">
+      <div class="content-zone">
+
+        <div class="swim">
+
+          <!-- Period header row (4 quarters) -->
+          <div class="swim__head" style="grid-template-columns: 160px repeat(4,1fr);">
+            <div></div><!-- lane label spacer -->
+            <div class="swim__period">Q3 FY25</div>
+            <div class="swim__period">Q4 FY25</div>
+            <div class="swim__period">Q1 FY26</div>
+            <div class="swim__period">Q2 FY26</div>
+          </div>
+
+          <!-- Lane body -->
+          <div class="swim__body">
+
+            <!-- Lane: Dealflow -->
+            <div class="swim__lane" style="grid-template-columns: 160px repeat(4,1fr);">
+              <div class="swim__lane-label">Dealflow</div>
+              <div class="swim__cell">
+                <div class="swim__item" data-variant="strong">Kick-off &amp; sourcing setup</div>
+              </div>
+              <div class="swim__cell">
+                <div class="swim__item" data-variant="med">Weekly cadence live</div>
+              </div>
+              <div class="swim__cell">
+                <div class="swim__item" data-variant="med">Vertical expansion</div>
+              </div>
+              <div class="swim__cell">
+                <div class="swim__item" data-variant="light">Optimise ranking model</div>
+              </div>
+            </div>
+
+            <!-- Lane: Pilots -->
+            <div class="swim__lane" style="grid-template-columns: 160px repeat(4,1fr);">
+              <div class="swim__lane-label">Pilots</div>
+              <div class="swim__cell"></div>
+              <div class="swim__cell">
+                <div class="swim__item" data-variant="strong">Pilot #1 scoped</div>
+              </div>
+              <div class="swim__cell">
+                <div class="swim__item" data-variant="med">Pilot #1 live</div>
+                <div class="swim__item" data-variant="pale" style="margin-top:6px;">Pilot #2 scoped</div>
+              </div>
+              <div class="swim__cell">
+                <div class="swim__item" data-variant="med">Pilot #2 live</div>
+              </div>
+            </div>
+
+            <!-- Lane: Reporting -->
+            <div class="swim__lane" style="grid-template-columns: 160px repeat(4,1fr);">
+              <div class="swim__lane-label">Reporting</div>
+              <div class="swim__cell">
+                <div class="swim__item" data-variant="pale">Dashboard setup</div>
+              </div>
+              <div class="swim__cell">
+                <div class="swim__item" data-variant="light">QBR · Q4 report</div>
+              </div>
+              <div class="swim__cell">
+                <div class="swim__item" data-variant="light">QBR · Q1 report</div>
+              </div>
+              <div class="swim__cell">
+                <div class="swim__item" data-variant="strong">Annual impact review</div>
+              </div>
+            </div>
+
+          </div><!-- /swim__body -->
+
+        </div><!-- /swim -->
+
+      </div>
+    </main>
+  </div><!-- /slide__main -->
+  </div><!-- /slide -->
+</div>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Closing · Light — Playbook mockup</title>
+  <link rel="stylesheet" href="playbook.css">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body {
+      width: 100%; height: 100%;
+      background: #2a2a2a;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .viewer {
+      width: 1920px; height: 1080px;
+      transform-origin: center center;
+    }
+  </style>
+  <script>
+    function scale() {
+      const v = document.querySelector('.viewer');
+      const s = Math.min(window.innerWidth / 1920, window.innerHeight / 1080);
+      v.style.transform = `scale(${s})`;
+    }
+    window.addEventListener('load', scale);
+    window.addEventListener('resize', scale);
+  </script>
+</head>
+<body>
+<div class="viewer">
+
+  <!-- ═══════════════════════════════════════════════════════════
+       SLIDE — Closing · Light
+       ═══════════════════════════════════════════════════════════ -->
+  <div class="slide special-slide closing-light">
+
+    <div class="closing-light__inner">
+      <h1 class="closing-light__title">Thank you.</h1>
+      <p class="closing-light__lead">Questions, next steps, or introductions — we're ready when you are.</p>
+    </div>
+
+    <footer class="closing-light__footer">
+      <div class="closing-light__contact">
+        <span class="closing-light__contact-label">Get in touch</span>
+        <strong class="closing-light__contact-value">hello@pnptc.com</strong>
+      </div>
+      <div class="closing-light__people">
+        <div class="closing-light__person">
+          <strong>Marielle Adler</strong>
+          <span>Head of Ventures</span>
+        </div>
+        <div class="closing-light__person">
+          <strong>Thomas Singh</strong>
+          <span>Account Director</span>
+        </div>
+      </div>
+    </footer>
+
+  </div><!-- /slide -->
+
+</div><!-- /viewer -->
+</body>
+</html>

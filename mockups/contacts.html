@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact Cards — Playbook mockup</title>
+  <link rel="stylesheet" href="playbook.css">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { width: 100%; height: 100%; background: #2a2a2a; display: flex; align-items: center; justify-content: center; }
+    .viewer { width: 1920px; height: 1080px; transform-origin: center center; }
+
+    /* Contacts grid: let row height be driven by content, not the
+       full content-zone height. Keep the grid centred vertically. */
+    .contacts {
+      grid-auto-rows: auto !important;
+      align-content: center !important;
+    }
+
+    /* ── Contact card layout overrides ───────────────────────────────
+       2-column: square photo (preserves aspect ratio) | info column.
+       Photo is a fixed square; card content is vertically centred.
+    ─────────────────────────────────────────────────────────────────── */
+    .contact-card {
+      grid-template-columns: auto 1fr !important;
+      gap: 40px !important;
+      padding: 40px !important;
+      align-items: center !important;
+      max-height: none !important;
+    }
+    /* Photo: square, fixed size — preserves natural aspect ratio */
+    .contact-card__photo {
+      width: 340px !important;
+      height: 340px !important;
+      aspect-ratio: 1 / 1 !important;
+      align-self: center !important;
+      border-radius: 20px !important;
+      flex-shrink: 0;
+      overflow: hidden;
+    }
+    .contact-card__photo img {
+      object-fit: cover;
+      object-position: top center;
+    }
+    /* Info column: vertical stack, no extra flex needed */
+    .contact-card__info {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+    /* Name: wraps freely */
+    .contact-card__name {
+      font-size: 30px !important;
+      white-space: normal !important;
+      overflow: visible !important;
+      text-overflow: unset !important;
+      line-height: 1.2;
+      margin-bottom: 6px;
+    }
+    .contact-card__role {
+      font-size: 19px !important;
+      margin-bottom: 4px;
+    }
+    .contact-card__meta {
+      font-size: 14px !important;
+      margin-bottom: 24px;
+    }
+    /* Thin rule */
+    .contact-card__divider {
+      height: 1px;
+      background: #e8eaf0;
+      margin-bottom: 20px;
+    }
+    .contact-card__email {
+      font-size: 21px !important;
+      word-break: normal !important;
+    }
+  </style>
+  <script>
+    function scale() {
+      const v = document.querySelector('.viewer');
+      v.style.transform = `scale(${Math.min(window.innerWidth/1920, window.innerHeight/1080)})`;
+    }
+    window.addEventListener('load', scale);
+    window.addEventListener('resize', scale);
+  </script>
+</head>
+<body>
+<div class="viewer">
+  <div class="slide">
+  <div class="slide__main">
+    <header class="slide__header">
+      <div class="slide__header-title">Innovation Review · FY26 Q2</div>
+      <div class="slide__header-meta">
+        <div class="slide__page-num">31 <span style="opacity:0.5">/ 42</span></div>
+        <div class="slide__logos">
+          <img src="https://cdn.jsdelivr.net/gh/aromero-pnptc/pnp-skill-assets@main/logos/pnp-logo.svg" height="18" alt="PNP" style="opacity:0.55">
+          <img src="https://cdn.jsdelivr.net/gh/aromero-pnptc/pnp-skill-assets@main/logos/playbook-logo.svg" height="18" alt="Playbook" style="opacity:0.55">
+        </div>
+      </div>
+    </header>
+    <div class="slide__title-zone">
+      <div class="slide__purple-bar"></div>
+      <h1 class="slide__title">Your team at Plug and Play</h1>
+    </div>
+    <main class="slide__content">
+      <div class="content-zone">
+
+        <div class="contacts contacts--2col">
+
+          <article class="pb-card contact-card">
+            <!-- Portrait photo strip -->
+            <div class="contact-card__photo">
+              <img src="https://cdn.jsdelivr.net/gh/aromero-pnptc/pnp-skill-assets@main/photos/people/placeholder/placeholder%20headshot.png"
+                   alt="Alejandro Romero">
+            </div>
+            <!-- Info column -->
+            <div class="contact-card__info">
+              <div class="contact-card__id">
+                <div class="contact-card__name">Alejandro Romero</div>
+                <div class="contact-card__role">Managing Director</div>
+                <div class="contact-card__meta">Silicon Valley · Corporate Innovation</div>
+              </div>
+              <div class="contact-card__divider"></div>
+              <div class="contact-card__contact">
+                <a class="contact-card__email" href="mailto:a.romero@pnptc.com">a.romero@pnptc.com</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="pb-card contact-card">
+            <div class="contact-card__photo">
+              <img src="https://cdn.jsdelivr.net/gh/aromero-pnptc/pnp-skill-assets@main/photos/people/placeholder/placeholder%20headshot.png"
+                   alt="Kira Lund">
+            </div>
+            <div class="contact-card__info">
+              <div class="contact-card__id">
+                <div class="contact-card__name">Kira Lund</div>
+                <div class="contact-card__role">Senior Associate</div>
+                <div class="contact-card__meta">Silicon Valley · Dealflow &amp; Portfolio Ops</div>
+              </div>
+              <div class="contact-card__divider"></div>
+              <div class="contact-card__contact">
+                <a class="contact-card__email" href="mailto:k.lund@pnptc.com">k.lund@pnptc.com</a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </main>
+  </div><!-- /slide__main -->
+  </div><!-- /slide -->
+</div>
+</body>
+</html>

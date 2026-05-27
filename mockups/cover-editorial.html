@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cover · Editorial — Playbook mockup</title>
+  <link rel="stylesheet" href="playbook.css">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body {
+      width: 100%; height: 100%;
+      background: #2a2a2a;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .viewer {
+      width: 1920px; height: 1080px;
+      transform-origin: center center;
+    }
+    .photo-placeholder {
+      width: 100%; height: 100%;
+      background: #D8DCEB;
+      display: flex; align-items: center; justify-content: center;
+      color: #94A0B8; font-size: 22px; font-weight: 500;
+    }
+  </style>
+  <script>
+    function scale() {
+      const v = document.querySelector('.viewer');
+      const s = Math.min(window.innerWidth / 1920, window.innerHeight / 1080);
+      v.style.transform = `scale(${s})`;
+    }
+    window.addEventListener('load', scale);
+    window.addEventListener('resize', scale);
+  </script>
+</head>
+<body>
+<div class="viewer">
+
+  <!-- ═══════════════════════════════════════════════════════════
+       SLIDE — Cover · Editorial split
+       ═══════════════════════════════════════════════════════════ -->
+  <div class="slide special-slide cover-editorial">
+
+    <!-- Left: brand + title block + date -->
+    <div class="cover-editorial__left">
+
+      <div class="cover-editorial__brand">
+        <span style="font-size:15px;font-weight:700;color:#94A0B8;letter-spacing:0.05em">PNP</span>
+        <span style="font-size:15px;font-weight:700;color:#94A0B8;letter-spacing:0.05em">PLAYBOOK</span>
+      </div>
+
+      <div class="cover-editorial__body">
+        <div class="cover-editorial__bar"></div>
+        <div class="cover-editorial__eyebrow">Innovation Review</div>
+        <h1 class="cover-editorial__title">FY26<br>Q2</h1>
+        <div class="cover-editorial__subtitle">Dealflow, pilots, and the startups building what your teams need next.</div>
+      </div>
+
+      <div class="cover-editorial__date">May 2026</div>
+
+    </div>
+
+    <!-- Right: photo / illustration -->
+    <div class="cover-editorial__right">
+      <div class="photo-placeholder">Cover photo</div>
+    </div>
+
+  </div><!-- /slide -->
+
+</div><!-- /viewer -->
+</body>
+</html>

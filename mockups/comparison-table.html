@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>How we compare — Playbook mockup</title>
+  <link rel="stylesheet" href="playbook.css">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { width: 100%; height: 100%; background: #2a2a2a; display: flex; align-items: center; justify-content: center; }
+    .viewer { width: 1920px; height: 1080px; transform-origin: center center; }
+  </style>
+  <script>
+    function scale() {
+      const v = document.querySelector('.viewer');
+      v.style.transform = `scale(${Math.min(window.innerWidth/1920, window.innerHeight/1080)})`;
+    }
+    window.addEventListener('load', scale);
+    window.addEventListener('resize', scale);
+  </script>
+</head>
+<body>
+<div class="viewer">
+  <div class="slide">
+  <div class="slide__main">
+    <header class="slide__header">
+      <div class="slide__header-title">Innovation Review · FY26 Q2</div>
+      <div class="slide__header-meta">
+        <div class="slide__page-num">28 <span style="opacity:0.5">/ 42</span></div>
+        <div class="slide__logos">
+          <img src="https://cdn.jsdelivr.net/gh/aromero-pnptc/pnp-skill-assets@main/logos/pnp-logo.svg" height="18" alt="PNP" style="opacity:0.55">
+          <img src="https://cdn.jsdelivr.net/gh/aromero-pnptc/pnp-skill-assets@main/logos/playbook-logo.svg" height="18" alt="Playbook" style="opacity:0.55">
+        </div>
+      </div>
+    </header>
+    <div class="slide__title-zone">
+      <div class="slide__purple-bar"></div>
+      <h1 class="slide__title">How we compare</h1>
+    </div>
+    <main class="slide__content">
+      <div class="content-zone">
+        <div class="cmp-table" style="--cmp-cols: 3">
+  <div class="cmp-table__head">
+    <div class="cmp-table__cell cmp-table__cell--head"></div>
+    <div class="cmp-table__cell cmp-table__cell--head">In-house team</div>
+    <div class="cmp-table__cell cmp-table__cell--head cmp-table__cell--highlight">Playbook</div>
+    <div class="cmp-table__cell cmp-table__cell--head">General accelerator</div>
+  </div>
+  <div class="cmp-table__body">
+    <div class="cmp-table__row">
+      <div class="cmp-table__cell cmp-table__cell--criteria">Pre-qualified dealflow</div>
+      <div class="cmp-table__cell cmp-table__cell--value">
+        <svg class="cmp-table__dash" viewBox="0 0 28 28" fill="none"><circle cx="14" cy="14" r="12" fill="#fde2e1"/><path d="M9 14h10" stroke="#c84a44" stroke-width="2" stroke-linecap="round"/></svg>
+      </div>
+      <div class="cmp-table__cell cmp-table__cell--value cmp-table__cell--highlight">
+        <svg class="cmp-table__check" viewBox="0 0 28 28" fill="none"><circle cx="14" cy="14" r="12" fill="#e3f2eb"/><path d="M9 14l3 3 7-7" stroke="#2f7d5a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
+      <div class="cmp-table__cell cmp-table__cell--value">
+        <svg class="cmp-table__dash" viewBox="0 0 28 28" fill="none"><circle cx="14" cy="14" r="12" fill="#fde2e1"/><path d="M9 14h10" stroke="#c84a44" stroke-width="2" stroke-linecap="round"/></svg>
+      </div>
+    </div>
+    <div class="cmp-table__row cmp-table__row--alt">
+      <div class="cmp-table__cell cmp-table__cell--criteria">Standard pilot framework</div>
+      <div class="cmp-table__cell cmp-table__cell--value">
+        <svg class="cmp-table__dash" viewBox="0 0 28 28" fill="none"><circle cx="14" cy="14" r="12" fill="#fde2e1"/><path d="M9 14h10" stroke="#c84a44" stroke-width="2" stroke-linecap="round"/></svg>
+      </div>
+      <div class="cmp-table__cell cmp-table__cell--value cmp-table__cell--highlight">
+        <svg class="cmp-table__check" viewBox="0 0 28 28" fill="none"><circle cx="14" cy="14" r="12" fill="#e3f2eb"/><path d="M9 14l3 3 7-7" stroke="#2f7d5a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
+      <div class="cmp-table__cell cmp-table__cell--value">
+        <svg class="cmp-table__check" viewBox="0 0 28 28" fill="none"><circle cx="14" cy="14" r="12" fill="#e3f2eb"/><path d="M9 14l3 3 7-7" stroke="#2f7d5a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
+    </div>
+    <div class="cmp-table__row">
+      <div class="cmp-table__cell cmp-table__cell--criteria">Board-ready impact reports</div>
+      <div class="cmp-table__cell cmp-table__cell--value">
+        <svg class="cmp-table__dash" viewBox="0 0 28 28" fill="none"><circle cx="14" cy="14" r="12" fill="#fde2e1"/><path d="M9 14h10" stroke="#c84a44" stroke-width="2" stroke-linecap="round"/></svg>
+      </div>
+      <div class="cmp-table__cell cmp-table__cell--value cmp-table__cell--highlight">
+        <svg class="cmp-table__check" viewBox="0 0 28 28" fill="none"><circle cx="14" cy="14" r="12" fill="#e3f2eb"/><path d="M9 14l3 3 7-7" stroke="#2f7d5a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
+      <div class="cmp-table__cell cmp-table__cell--value">
+        <svg class="cmp-table__dash" viewBox="0 0 28 28" fill="none"><circle cx="14" cy="14" r="12" fill="#fde2e1"/><path d="M9 14h10" stroke="#c84a44" stroke-width="2" stroke-linecap="round"/></svg>
+      </div>
+    </div>
+    <div class="cmp-table__row cmp-table__row--alt">
+      <div class="cmp-table__cell cmp-table__cell--criteria">Dedicated account team</div>
+      <div class="cmp-table__cell cmp-table__cell--value">
+        <svg class="cmp-table__check" viewBox="0 0 28 28" fill="none"><circle cx="14" cy="14" r="12" fill="#e3f2eb"/><path d="M9 14l3 3 7-7" stroke="#2f7d5a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
+      <div class="cmp-table__cell cmp-table__cell--value cmp-table__cell--highlight">
+        <svg class="cmp-table__check" viewBox="0 0 28 28" fill="none"><circle cx="14" cy="14" r="12" fill="#e3f2eb"/><path d="M9 14l3 3 7-7" stroke="#2f7d5a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
+      <div class="cmp-table__cell cmp-table__cell--value">
+        <svg class="cmp-table__dash" viewBox="0 0 28 28" fill="none"><circle cx="14" cy="14" r="12" fill="#fde2e1"/><path d="M9 14h10" stroke="#c84a44" stroke-width="2" stroke-linecap="round"/></svg>
+      </div>
+    </div>
+    <div class="cmp-table__row">
+      <div class="cmp-table__cell cmp-table__cell--criteria">Cost per pilot (typical)</div>
+      <div class="cmp-table__cell cmp-table__cell--value"><span class="cmp-table__text">€80–120K/yr</span></div>
+      <div class="cmp-table__cell cmp-table__cell--value cmp-table__cell--highlight"><span class="cmp-table__text" style="color:white;font-weight:700">€48K/yr</span></div>
+      <div class="cmp-table__cell cmp-table__cell--value"><span class="cmp-table__text">€30K + equity</span></div>
+    </div>
+  </div>
+</div>
+      </div>
+    </main>
+  </div><!-- /slide__main -->
+  </div><!-- /slide -->
+</div>
+</body>
+</html>

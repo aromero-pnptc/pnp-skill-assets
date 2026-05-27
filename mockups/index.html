@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Playbook Slide Mockups — Gallery</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #161F41;
+      --card: #1D2A57;
+      --border: #2d3a6b;
+      --text1: #FFFFFF;
+      --text2: #C6CEDC;
+      --text3: #94A0B8;
+      --accent: #3333CC;
+      --accent-soft: #ACA5FA;
+      --chip-bg: #251A95;
+    }
+
+    html, body {
+      min-height: 100vh;
+      background: var(--bg);
+      color: var(--text1);
+      font-family: 'Inter', system-ui, sans-serif;
+    }
+
+    .header {
+      padding: 40px 48px 32px;
+      border-bottom: 1px solid var(--border);
+      display: flex; align-items: baseline; gap: 24px;
+    }
+    .header h1 {
+      font-size: 24px; font-weight: 700;
+      color: var(--text1);
+      letter-spacing: -0.02em;
+    }
+    .header p {
+      font-size: 15px; color: var(--text3); font-weight: 400;
+    }
+
+    .sections { padding: 40px 48px 80px; display: flex; flex-direction: column; gap: 48px; }
+
+    .section-label {
+      font-size: 11px; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 0.12em;
+      color: var(--text3);
+      margin-bottom: 16px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 16px;
+    }
+
+    .card {
+      display: block;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+      text-decoration: none;
+      color: inherit;
+      transition: border-color 0.15s, box-shadow 0.15s;
+    }
+    .card:hover {
+      border-color: var(--accent-soft);
+      box-shadow: 0 0 0 1px var(--accent-soft), 0 8px 24px rgba(0,0,0,0.4);
+    }
+
+    /* Thumbnail: absolutely-positioned 1920×1080 iframe scaled to 160px tall.
+       The iframe viewport is native 1920×1080, so no JS re-scaling happens inside.
+       CSS transform shrinks it to a preview thumbnail. */
+    .card__thumb {
+      position: relative;
+      width: 100%;
+      height: 160px;
+      overflow: hidden;
+      background: #F5F5F7; /* slide bg so edges don't show dark */
+    }
+    .card__thumb iframe {
+      position: absolute;
+      top: 0; left: 0;
+      width: 1920px;
+      height: 1080px;
+      border: none;
+      transform-origin: top left;
+      transform: scale(calc(160 / 1080)); /* ≈ 0.148 */
+      pointer-events: none;
+    }
+
+    .card__body {
+      padding: 16px 20px;
+      display: flex; flex-direction: column; gap: 4px;
+    }
+    .card__name {
+      font-size: 15px; font-weight: 600;
+      color: var(--text1);
+      letter-spacing: -0.005em;
+    }
+    .card__type {
+      font-size: 13px; color: var(--text3); font-weight: 400;
+    }
+    .card__chip {
+      display: inline-block;
+      margin-top: 6px;
+      background: var(--chip-bg);
+      color: var(--accent-soft);
+      font-size: 11px; font-weight: 600;
+      text-transform: uppercase; letter-spacing: 0.08em;
+      padding: 3px 8px;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="header">
+  <h1>Playbook Mockups</h1>
+  <p>55 slides · click to open full-screen</p>
+</div>
+
+<div class="sections">
+
+  <!-- ── Covers ─────────────────────────────── -->
+  <div>
+    <div class="section-label">Covers</div>
+    <div class="grid">
+      <a class="card" href="cover-editorial.html" target="_blank">
+        <div class="card__thumb"><iframe src="cover-editorial.html" scrolling="no"></iframe></div>
+        <div class="card__body">
+          <div class="card__name">Cover · Editorial split</div>
+          <div class="card__type">Light · 50/50 grid · photo right</div>
+          <span class="card__chip">Special</span>
+        </div>
+      </a>
+      <a class="card" href="cover-dark.html" target="_blank">
+        <div class="card__thumb"><iframe src="cover-dark.html" scrolling="no"></iframe></div>
+        <div class="card__body">
+          <div class="card__name">Cover · Dark hero</div>
+          <div class="card__type">Oxford Blue · centered title</div>
+          <span class="card__chip">Special</span>
+        </div>
+      </a>
+      <a class="card" href="cover-purple.html" target="_blank">
+        <div class="card__thumb"><iframe src="cover-purple.html" scrolling="no"></iframe></div>
+        <div class="card__body">
+          <div class="card__name">Cover · Purple flood</div>
+          <div class="card__type">Full-bleed purple · large title</div>
+          <span class="card__chip">Special</span>
+        </div>
+      </a>
+      <a class="card" href="cover-dramatic.html" target="_blank">
+        <div class="card__thumb"><iframe src="cover-dramatic.html" scrolling="no"></iframe></div>
+        <div class="card__body">
+          <div class="card__name">Cover · Dramatic</div>
+          <div class="card__type">Full-bleed photo · scrim · large title</div>
+          <span class="card__chip">Special</span>
+        </div>
+      </a>
+      <a class="card" href="cover-feather-dark.html" target="_blank">
+        <div class="card__thumb"><iframe src="cover-feather-dark.html" scrolling="no"></iframe></div>
+        <div class="card__body">
+          <div class="card__name">Cover · Feather dark</div>
+          <div class="card__type">Oxford Blue · photo fades left</div>
+          <span class="card__chip">Special</span>
+        </div>
+      </a>
+      <a class="card" href="cover-feather-light.html" target="_blank">
+        <div class="card__thumb"><iframe src="cover-feather-light.html" scrolling="no"></iframe></div>
+        <div class="card__body">
+          <div class="card__name">Cover · Feather light</div>
+          <div class="card__type">Light panel · photo fades left</div>
+          <span class="card__chip">Special</span>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <!-- ── Section dividers ───────────────────── -->
+  <div>
+    <div class="section-label">Section Dividers</div>
+    <div class="grid">
+      <a class="card" href="section-number.html" target="_blank">
+        <div class="card__thumb"><iframe src="section-number.html" scrolling="no"></iframe></div>
+        <div class="card__body">
+          <div class="card__name">Section · Big number</div>
+          <div class="card__type">600px digit · purple title</div>
+          <span class="card__chip">Special</span>
+        </div>
+      </a>
+      <a class="card" href="section-banner.html" target="_blank">
+        <div class="card__thumb"><iframe src="section-banner.html" scrolling="no"></iframe></div>
+        <div class="card__body">
+          <div class="card__name">Section · Purple banner</div>
+          <div class="card__type">Full-bleed accent · large title</div>
+          <span class="card__chip">Special</span>
+        </div>
+      </a>
+      <a class="card" href="section-split.html" target="_blank">
+        <div class="card__thumb"><iframe src="section-split.html" scrolling="no"></iframe></div>
+        <div class="card__body">
+          <div class="card__name">Section · Split</div>
+          <div class="card__type">50/50 · text left · photo right</div>
+          <span class="card__chip">Special</span>
+        </div>
+      </a>
+      <a class="card" href="section-photo-left.html" target="_blank">
+        <div class="card__thumb"><iframe src="section-photo-left.html" scrolling="no"></iframe></div>
+        <div class="card__body">
+          <div class="card__name">Section · Photo left</div>
+          <div class="card__type">Full-bleed photo · left scrim · large title</div>
+          <span class="card__chip">Special</span>
+        </div>
+      </a>
+      <a class="card" href="section-photo-bottom.html" target="_blank">
+        <div class="card__thumb"><iframe src="section-photo-bottom.html" scrolling="no"></iframe></div>
+        <div class="card__body">
+          <div class="card__name">Section · Photo bottom</div>
+          <div class="card__type">Full-bleed photo · bottom scrim · title</div>
+          <span class="card__chip">Special</span>
+        </div>
+      </a>
+      <a class="card" href="section-stmt-light.html" target="_blank">
+        <div class="card__thumb"><iframe src="section-stmt-light.html" scrolling="no"></iframe></div>
+        <div class="card__body">
+          <div class="card__name">Section · Statement light</div>
+          <div class="card__type">Pull-quote · large serif mark · attribution</div>
+          <span class="card__chip">Special</span>
+        </div>
+      </a>
+      <a class="card" href="section-stmt-dark.html" target="_blank">
+        <div class="card__thumb"><iframe src="section-stmt-dark.html" scrolling="no"></iframe></div>
+        <div class="card__body">
+          <div class="card__name">Section · Statement dark</div>
+          <div class="card__type">Oxford Blue · pull-quote · attribution</div>
+          <span class="card__chip">Special</span>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <!-- ── Bleed zones ───────────────────────── -->
+  <div>
+    <div class="section-label">Bleed Zones</div>
+    <div class="grid">
+      <a class="card" href="cards-3up--bleed-1-6.html" target="_blank">
+        <div class="card__thumb"><iframe src="cards-3up--bleed-1-6.html" scrolling="no"></iframe></div>
+        <div class="card__body">
+          <div class="card__name">Bleed 1/6 · right photo</div>
+          <div class="card__type">320px photo strip · 5/6 content</div>
+        </div>
+      </a>
+      <a class="card" href="cards-3up--bleed-2-6.html" target="_blank">
+        <div class="card__thumb"><iframe src="cards-3up--bleed-2-6.html" scrolling="no"></iframe></div>
+        <div class="card__body">
+          <div class="card__name">Bleed 2/6 · right photo</div>
+          <div class="card__type">640px photo strip · 4/6 content</div>
+        </div>
+      </a>
+      <a class="card" href="cards-3up--bleed-3-6.html" target="_blank">
+        <div class="card__thumb"><iframe src="cards-3up--bleed-3-6.html" scrolling="no"></iframe></div>
+        <div class="card__body">
+          <div class="card__name">Bleed 3/6 · right photo</div>
+          <div class="card__type">960px photo strip · 3/6 content</div>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <!-- ── Cards ─────────────────────────────── -->
+  <div>
+    <div class="section-label">Cards</div>
+    <div class="grid">
+      <a class="card" href="cards-3up.html" target="_blank">
+        <div class="card__thumb"><iframe src="cards-3up.html" scrolling="no"></iframe></div>
+        <div class="card__body">
+          <div class="card__name">Cards 3-up</div>
+          <div class="card__type">Text only · reflows 3→2→1</div>
+        </div>
+      </a>
+      <a class="card" href="cards-2x2.html" target="_blank">
+        <div class="card__thumb"><iframe src="cards-2x2.html" scrolling="no"></iframe></div>
+        <div class="card__body">
+          <div class="card__name">Cards 2×2</div>
+          <div class="card__type">Four equal cards · 2-column grid</div>
+        </div>
+      </a>
+      <a class="card" href="startup-cards.html" target="_blank">
+        <div class="card__thumb"><iframe src="startup-cards.html" scrolling="no"></iframe></div>
+        <div class="card__body">
+          <div class="card__name">Startup cards 4-up</div>
+          <div class="card__type">Logo · tags · body · raised amount</div>
+        </div>
+      </a>
+      <a class="card" href="cards-photo.html" target="_blank">
+        <div class="card__thumb"><iframe src="cards-photo.html" scrolling="no"></iframe></div>
+        <div class="card__body">
+          <div class="card__name">Cards · Photo bottom</div>
+          <div class="card__type">3-up · decorative image per card</div>
+        </div>
+      </a>
+      <a class="card" href="cards-icon.html" target="_blank">
+        <div class="card__thumb"><iframe src="cards-icon.html" scrolling="no"></iframe></div>
+        <div class="card__body">
+          <div class="card__name">Cards · Icon header</div>
+          <div class="card__type">3-up · icon + title row</div>
+        </div>
+      </a>
+      <a class="card" href="featured-startup.html" target="_blank">
+        <div class="card__thumb"><iframe src="featured-startup.html" scrolling="no"></iframe></div>
+        <div class="card__body">
+          <div class="card__name">Featured startup</div>
+          <div class="card__type">50/50 spotlight · stats · media</div>
+        </div>
+      </a>
+      <a class="card" href="contacts.html" target="_blank">
+        <div class="card__thumb"><iframe src="contacts.html" scrolling="no"></iframe></div>
+        <div class="card__body">
+          <div class="card__name">Contact cards 2-up</div>
+          <div class="card__type">Square headshot · name · role · email</div>
+        </div>
+      </a>
+      <a class="card" href="contacts-many.html" target="_blank">
+        <div class="card__thumb"><iframe src="contacts-many.html" scrolling="no"></iframe></div>
+        <div class="card__body">
+          <div class="card__name">Contact cards 7-up</div>
+          <div class="card__type">3-col compact · small headshot · 5–9 people</div>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <!-- ── Metrics ────────────────────────────── -->
+  <div>
+    <div class="section-label">Metrics</div>
+    <div class="grid">
+      <a class="card" href="metrics-4.html" target="_blank">
+        <div class="card__thumb"><iframe src="metrics-4.html" scrolling="no"></iframe></div>
+        <div class="card__body">
+          <div class="card__name">Metrics 4-up</div>
+          <div class="card__type">Column dividers · big numbers</div>
+        </div>
+      </a>
+      <a class="card" href="metrics-8.html" target="_blank">
+        <div class="card__thumb"><iframe src="metrics-8.html" scrolling="no"></iframe></div>
+        <div class="card__body">
+          <div class="card__name">Metrics 8-up</div>
+          <div class="card__type">4×2 grid · full funnel</div>
+        </div>
+      </a>
+      <a class="card" href="hero-metric.html" target="_blank">
+        <div class="card__thumb"><iframe src="hero-metric.html" scrolling="no"></iframe></div>
+        <div class="card__body">
+          <div class="card__name">Hero metric</div>
+          <div class="card__type">200px dominant figure · centered</div>
+        </div>
+      </a>
+      <a class="card" href="metrics-cards.html" target="_blank">
+        <div class="card__thumb"><iframe src="metrics-cards.html" scrolling="no"></iframe></div>
+        <div class="card__body">
+          <div class="card__name">Metrics as cards</div>
+          <div class="card__type">3+4 asymmetric row layout</div>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <!-- ── Takeaways & Bullets ───────────────── -->
+  <div>
+    <div class="section-label">Takeaways &amp; Bullets</div>
+    <div class="grid">
+      <a class="card" href="takeaways.html" target="_blank">
+        <div class="card__thumb"><iframe src="takeaways.html" scrolling="no"></iframe></div>
+        <div class="card__body">
+          <div class="card__name">Takeaways</div>
+          <div class="card__type">Cards with purple left-bar</div>
+        </div>
+      </a>
+      <a class="card" href="bullets.html" target="_blank">
+        <div class="card__thumb"><iframe src="bullets.html" scrolling="no"></iframe></div>
+        <div class="card__body">
+          <div class="card__name">Bullets</div>
+          <div class="card__type">Purple rule · lead text</div>
+        </div>
+      </a>
+      <a class="card" href="bullets-media.html" target="_blank">
+        <div class="card__thumb"><iframe src="bullets-media.html" scrolling="no"></iframe></div>
+        <div class="card__body">
+          <div class="card__name">Bullets + media</div>
+          <div class="card__type">Two-column · media placeholder right</div>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <!-- ── Statement ──────────────────────────── -->
+  <div>
+    <div class="section-label">Statement</div>
+    <div class="grid">
+      <a class="card" href="statement.html" target="_blank">
+        <div class="card__thumb"><iframe src="statement.html" scrolling="no"></iframe></div>
+        <div class="card__body">
+          <div class="card__name">Statement · centred</div>
+          <div class="card__type">72px pull-quote in white card</div>
+        </div>
+      </a>
+      <a class="card" href="statement-left.html" target="_blank">
+        <div class="card__thumb"><iframe src="statement-left.html" scrolling="no"></iframe></div>
+        <div class="card__body">
+          <div class="card__name">Statement · left-aligned</div>
+          <div class="card__type">64px left-aligned · eyebrow above</div>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <!-- ── Lists ──────────────────────────────── -->
+  <div>
+    <div class="section-label">Lists &amp; Index</div>
+    <div class="grid">
+      <a class="card" href="rows.html" target="_blank">
+        <div class="card__thumb"><iframe src="rows.html" scrolling="no"></iframe></div>
+        <div class="card__body">
+          <div class="card__name">Rows</div>
+          <div class="card__type">Full-width row cards · tag + body</div>
+        </div>
+      </a>
+      <a class="card" href="agenda.html" target="_blank">
+        <div class="card__thumb"><iframe src="agenda.html" scrolling="no"></iframe></div>
+        <div class="card__body">
+          <div class="card__name">Agenda</div>
+          <div class="card__type">Time · title · duration · dividers</div>
+        </div>
+      </a>
+      <a class="card" href="contents.html" target="_blank">
+        <div class="card__thumb"><iframe src="contents.html" scrolling="no"></iframe></div>
+        <div class="card__body">
+          <div class="card__name">Contents / Index</div>
+          <div class="card__type">Numbered · 2-column · page refs</div>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <!-- ── Data & Narrative ──────────────────── -->
+  <div>
+    <div class="section-label">Data &amp; Narrative</div>
+    <div class="grid">
+      <a class="card" href="timeline.html" target="_blank">
+        <div class="card__thumb"><iframe src="timeline.html" scrolling="no"></iframe></div>
+        <div class="card__body">
+          <div class="card__name">Timeline</div>
+          <div class="card__type">Alternating top/bottom · track · markers</div>
+        </div>
+      </a>
+      <a class="card" href="chart-donut.html" target="_blank">
+        <div class="card__thumb"><iframe src="chart-donut.html" scrolling="no"></iframe></div>
+        <div class="card__body">
+          <div class="card__name">Chart · Donut</div>
+          <div class="card__type">SVG segments · legend · 5 slices</div>
+        </div>
+      </a>
+      <a class="card" href="kpi-band.html" target="_blank">
+        <div class="card__thumb"><iframe src="kpi-band.html" scrolling="no"></iframe></div>
+        <div class="card__body">
+          <div class="card__name">KPI Band</div>
+          <div class="card__type">4-up cards · delta pills · up/down</div>
+        </div>
+      </a>
+      <a class="card" href="scorecard.html" target="_blank">
+        <div class="card__thumb"><iframe src="scorecard.html" scrolling="no"></iframe></div>
+        <div class="card__body">
+          <div class="card__name">Scorecard</div>
+          <div class="card__type">Progress bars · score pills · total</div>
+        </div>
+      </a>
+      <a class="card" href="roadmap.html" target="_blank">
+        <div class="card__thumb"><iframe src="roadmap.html" scrolling="no"></iframe></div>
+        <div class="card__body">
+          <div class="card__name">Roadmap</div>
+          <div class="card__type">3 lanes · shipped / in-flight / planning</div>
+        </div>
+      </a>
+      <a class="card" href="comparison-table.html" target="_blank">
+        <div class="card__thumb"><iframe src="comparison-table.html" scrolling="no"></iframe></div>
+        <div class="card__body">
+          <div class="card__name">Comparison table</div>
+          <div class="card__type">Feature grid · highlight column · check/dash</div>
+        </div>
+      </a>
+      <a class="card" href="data-table.html" target="_blank">
+        <div class="card__thumb"><iframe src="data-table.html" scrolling="no"></iframe></div>
+        <div class="card__body">
+          <div class="card__name">Data table</div>
+          <div class="card__type">Avatars · status pills · numeric columns</div>
+        </div>
+      </a>
+      <a class="card" href="chart-line.html" target="_blank">
+        <div class="card__thumb"><iframe src="chart-line.html" scrolling="no"></iframe></div>
+        <div class="card__body">
+          <div class="card__name">Chart · Line</div>
+          <div class="card__type">Two series · area fill · callout · legend</div>
+        </div>
+      </a>
+      <a class="card" href="chart-bar.html" target="_blank">
+        <div class="card__thumb"><iframe src="chart-bar.html" scrolling="no"></iframe></div>
+        <div class="card__body">
+          <div class="card__name">Chart · Bar</div>
+          <div class="card__type">Vertical bars · ranked · purple gradient</div>
+        </div>
+      </a>
+      <a class="card" href="swimlane.html" target="_blank">
+        <div class="card__thumb"><iframe src="swimlane.html" scrolling="no"></iframe></div>
+        <div class="card__body">
+          <div class="card__name">Swimlane</div>
+          <div class="card__type">3 lanes × 4 quarters · strong/med/pale items</div>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <!-- ── Flow & Evidence ───────────────────── -->
+  <div>
+    <div class="section-label">Flow &amp; Evidence</div>
+    <div class="grid">
+      <a class="card" href="process-flow.html" target="_blank">
+        <div class="card__thumb"><iframe src="process-flow.html" scrolling="no"></iframe></div>
+        <div class="card__body">
+          <div class="card__name">Process flow</div>
+          <div class="card__type">4 numbered steps · arrows · tags</div>
+        </div>
+      </a>
+      <a class="card" href="before-after.html" target="_blank">
+        <div class="card__thumb"><iframe src="before-after.html" scrolling="no"></iframe></div>
+        <div class="card__body">
+          <div class="card__name">Before / After</div>
+          <div class="card__type">Grey vs purple · metric · bullet points</div>
+        </div>
+      </a>
+      <a class="card" href="testimonial.html" target="_blank">
+        <div class="card__thumb"><iframe src="testimonial.html" scrolling="no"></iframe></div>
+        <div class="card__body">
+          <div class="card__name">Testimonial</div>
+          <div class="card__type">Large quote · portrait · company</div>
+        </div>
+      </a>
+      <a class="card" href="logo-wall.html" target="_blank">
+        <div class="card__thumb"><iframe src="logo-wall.html" scrolling="no"></iframe></div>
+        <div class="card__body">
+          <div class="card__name">Logo wall</div>
+          <div class="card__type">8-cell grid · coloured plates · meta</div>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <!-- ── Closings ───────────────────────────── -->
+  <div>
+    <div class="section-label">Closings</div>
+    <div class="grid">
+      <a class="card" href="closing-light.html" target="_blank">
+        <div class="card__thumb"><iframe src="closing-light.html" scrolling="no"></iframe></div>
+        <div class="card__body">
+          <div class="card__name">Closing · Light</div>
+          <div class="card__type">240px title · contact footer</div>
+          <span class="card__chip">Special</span>
+        </div>
+      </a>
+      <a class="card" href="closing-purple.html" target="_blank">
+        <div class="card__thumb"><iframe src="closing-purple.html" scrolling="no"></iframe></div>
+        <div class="card__body">
+          <div class="card__name">Closing · Purple</div>
+          <div class="card__type">Full-bleed purple · white title</div>
+          <span class="card__chip">Special</span>
+        </div>
+      </a>
+      <a class="card" href="closing-qa-light.html" target="_blank">
+        <div class="card__thumb"><iframe src="closing-qa-light.html" scrolling="no"></iframe></div>
+        <div class="card__body">
+          <div class="card__name">Closing · Q&amp;A Light</div>
+          <div class="card__type">Large Q&amp;A title · 3-col contact footer</div>
+          <span class="card__chip">Special</span>
+        </div>
+      </a>
+      <a class="card" href="closing-qa-dark.html" target="_blank">
+        <div class="card__thumb"><iframe src="closing-qa-dark.html" scrolling="no"></iframe></div>
+        <div class="card__body">
+          <div class="card__name">Closing · Q&amp;A Dark</div>
+          <div class="card__type">Oxford Blue · "?" badge decoration</div>
+          <span class="card__chip">Special</span>
+        </div>
+      </a>
+      <a class="card" href="closing-qa-purple.html" target="_blank">
+        <div class="card__thumb"><iframe src="closing-qa-purple.html" scrolling="no"></iframe></div>
+        <div class="card__body">
+          <div class="card__name">Closing · Q&amp;A Purple</div>
+          <div class="card__type">Full-bleed purple · "?" badge</div>
+          <span class="card__chip">Special</span>
+        </div>
+      </a>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>

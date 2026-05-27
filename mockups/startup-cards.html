@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Startup Cards 4-up — Playbook mockup</title>
+  <link rel="stylesheet" href="playbook.css">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body {
+      width: 100%; height: 100%;
+      background: #2a2a2a;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .viewer { width: 1920px; height: 1080px; transform-origin: center center; }
+  </style>
+  <script>
+    function scale() {
+      const v = document.querySelector('.viewer');
+      v.style.transform = `scale(${Math.min(window.innerWidth/1920, window.innerHeight/1080)})`;
+    }
+    window.addEventListener('load', scale);
+    window.addEventListener('resize', scale);
+  </script>
+</head>
+<body>
+<div class="viewer">
+  <div class="slide">
+  <div class="slide__main">
+    <header class="slide__header">
+      <div class="slide__header-title">Innovation Review · FY26 Q2</div>
+      <div class="slide__header-meta">
+        <div class="slide__page-num">18 <span style="opacity:0.5">/ 42</span></div>
+        <div class="slide__logos">
+          <img src="https://cdn.jsdelivr.net/gh/aromero-pnptc/pnp-skill-assets@main/logos/pnp-logo.svg" height="18" alt="PNP" style="opacity:0.55">
+          <img src="https://cdn.jsdelivr.net/gh/aromero-pnptc/pnp-skill-assets@main/logos/playbook-logo.svg" height="18" alt="Playbook" style="opacity:0.55">
+        </div>
+      </div>
+    </header>
+    <div class="slide__title-zone">
+      <div class="slide__purple-bar"></div>
+      <h1 class="slide__title">Four to watch this quarter</h1>
+    </div>
+    <main class="slide__content">
+      <div class="content-zone">
+        <div class="cards cards--startups">
+
+          <article class="pb-card startup-card">
+            <div class="startup-card__logo-area">
+              <img src="https://cdn.jsdelivr.net/gh/aromero-pnptc/pnp-skill-assets@main/logos/placeholder/placeholder%20startup.png"
+                   alt="" style="height:56px;width:auto;object-fit:contain;">
+            </div>
+            <div class="startup-card__meta">
+              <div class="startup-card__head"><h3 class="pb-h3">Aurelia</h3></div>
+              <div class="startup-card__tags">
+                <span class="pb-tag">AI / ML</span>
+                <span class="pb-tag pb-tag--outline">Series B</span>
+              </div>
+              <p class="pb-body-sm">AI claims-triage for P&amp;C insurers. Agentic workflows close 60% of low-severity tickets without a human in the loop.</p>
+            </div>
+            <div class="pb-divider"></div>
+            <div class="startup-card__footer">
+              <span class="pb-meta">Total raised</span>
+              <strong class="startup-card__amount">$48M</strong>
+            </div>
+          </article>
+
+          <article class="pb-card startup-card">
+            <div class="startup-card__logo-area">
+              <img src="https://cdn.jsdelivr.net/gh/aromero-pnptc/pnp-skill-assets@main/logos/placeholder/placeholder%20startup.png"
+                   alt="" style="height:56px;width:auto;object-fit:contain;">
+            </div>
+            <div class="startup-card__meta">
+              <div class="startup-card__head"><h3 class="pb-h3">Helio</h3></div>
+              <div class="startup-card__tags">
+                <span class="pb-tag">ClimateTech</span>
+                <span class="pb-tag pb-tag--outline">Series A</span>
+              </div>
+              <p class="pb-body-sm">Modular battery storage co-located with industrial load. Live with two utilities in Iberia and the UK.</p>
+            </div>
+            <div class="pb-divider"></div>
+            <div class="startup-card__footer">
+              <span class="pb-meta">Total raised</span>
+              <strong class="startup-card__amount">$22M</strong>
+            </div>
+          </article>
+
+          <article class="pb-card startup-card">
+            <div class="startup-card__logo-area">
+              <img src="https://cdn.jsdelivr.net/gh/aromero-pnptc/pnp-skill-assets@main/logos/placeholder/placeholder%20startup.png"
+                   alt="" style="height:56px;width:auto;object-fit:contain;">
+            </div>
+            <div class="startup-card__meta">
+              <div class="startup-card__head"><h3 class="pb-h3">Verba</h3></div>
+              <div class="startup-card__tags">
+                <span class="pb-tag">HealthTech</span>
+                <span class="pb-tag pb-tag--outline">Seed</span>
+              </div>
+              <p class="pb-body-sm">Ambient documentation for clinical visits — fully on-device, EU-resident, no PHI leaves the hospital network.</p>
+            </div>
+            <div class="pb-divider"></div>
+            <div class="startup-card__footer">
+              <span class="pb-meta">Total raised</span>
+              <strong class="startup-card__amount">$9M</strong>
+            </div>
+          </article>
+
+          <article class="pb-card startup-card">
+            <div class="startup-card__logo-area">
+              <img src="https://cdn.jsdelivr.net/gh/aromero-pnptc/pnp-skill-assets@main/logos/placeholder/placeholder%20startup.png"
+                   alt="" style="height:56px;width:auto;object-fit:contain;">
+            </div>
+            <div class="startup-card__meta">
+              <div class="startup-card__head"><h3 class="pb-h3">Tessera</h3></div>
+              <div class="startup-card__tags">
+                <span class="pb-tag">FinTech</span>
+                <span class="pb-tag pb-tag--outline">Series B</span>
+              </div>
+              <p class="pb-body-sm">Embedded credit infrastructure for B2B marketplaces. Underwrites in seconds against verified buyer cashflow.</p>
+            </div>
+            <div class="pb-divider"></div>
+            <div class="startup-card__footer">
+              <span class="pb-meta">Total raised</span>
+              <strong class="startup-card__amount">$54M</strong>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </main>
+  </div><!-- /slide__main -->
+  </div><!-- /slide -->
+</div>
+</body>
+</html>

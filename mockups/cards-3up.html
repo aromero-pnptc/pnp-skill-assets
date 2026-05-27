@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cards 3-up — Playbook mockup</title>
+  <link rel="stylesheet" href="playbook.css">
+  <style>
+    /* Viewer: scale the 1920×1080 slide to fit the browser window */
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body {
+      width: 100%; height: 100%;
+      background: #2a2a2a;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .viewer {
+      width: 1920px; height: 1080px;
+      transform-origin: center center;
+    }
+    /* placeholder images */
+    .photo-placeholder {
+      width: 100%; height: 100%;
+      background: #D8DCEB;
+      display: flex; align-items: center; justify-content: center;
+      color: #94A0B8; font-size: 18px; font-weight: 500;
+    }
+  </style>
+  <script>
+    function scale() {
+      const v = document.querySelector('.viewer');
+      const s = Math.min(window.innerWidth / 1920, window.innerHeight / 1080);
+      v.style.transform = `scale(${s})`;
+    }
+    window.addEventListener('load', scale);
+    window.addEventListener('resize', scale);
+  </script>
+</head>
+<body>
+<div class="viewer">
+
+  <!-- ═══════════════════════════════════════════════════════════
+       SLIDE — Cards 3-up · no bleed
+       ═══════════════════════════════════════════════════════════ -->
+  <div class="slide">
+  <div class="slide__main">
+
+    <!-- Header -->
+    <header class="slide__header">
+      <div class="slide__header-title">Innovation Review · FY26 Q2</div>
+      <div class="slide__header-meta">
+        <div class="slide__page-num">05 <span style="opacity:0.5">/ 42</span></div>
+        <div class="slide__logos">
+          <!-- Using text placeholders until logo assets are available -->
+          <img src="https://cdn.jsdelivr.net/gh/aromero-pnptc/pnp-skill-assets@main/logos/pnp-logo.svg" height="18" alt="PNP" style="opacity:0.55">
+          <img src="https://cdn.jsdelivr.net/gh/aromero-pnptc/pnp-skill-assets@main/logos/playbook-logo.svg" height="18" alt="Playbook" style="opacity:0.55">
+        </div>
+      </div>
+    </header>
+
+    <!-- Title zone -->
+    <div class="slide__title-zone">
+      <div class="slide__purple-bar"></div>
+      <h1 class="slide__title">How the engagement works</h1>
+    </div>
+
+    <!-- Content -->
+    <main class="slide__content">
+      <div class="content-zone">
+        <div class="cards cards--text">
+
+          <article class="pb-card">
+            <h3 class="pb-h3">Source</h3>
+            <p class="pb-body">847 startups screened through our smart filters this quarter,
+              surfacing 62 that fit live opportunities from your innovation teams.</p>
+          </article>
+
+          <article class="pb-card">
+            <h3 class="pb-h3">Match</h3>
+            <p class="pb-body">Each shortlisted startup is paired with the right corporate
+              sponsor before introduction. No cold inbound, no wasted hours.</p>
+          </article>
+
+          <article class="pb-card">
+            <h3 class="pb-h3">Scale</h3>
+            <p class="pb-body">18 pilots moved into production this year — across ClimateTech,
+              FinTech, and Mobility verticals — with €32M of recurring revenue impact.</p>
+          </article>
+
+        </div>
+      </div>
+    </main>
+
+  </div><!-- /slide__main -->
+  </div><!-- /slide -->
+
+</div><!-- /viewer -->
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Before and after Playbook — Playbook mockup</title>
+  <link rel="stylesheet" href="playbook.css">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { width: 100%; height: 100%; background: #2a2a2a; display: flex; align-items: center; justify-content: center; }
+    .viewer { width: 1920px; height: 1080px; transform-origin: center center; }
+  </style>
+  <script>
+    function scale() {
+      const v = document.querySelector('.viewer');
+      v.style.transform = `scale(${Math.min(window.innerWidth/1920, window.innerHeight/1080)})`;
+    }
+    window.addEventListener('load', scale);
+    window.addEventListener('resize', scale);
+  </script>
+</head>
+<body>
+<div class="viewer">
+  <div class="slide">
+  <div class="slide__main">
+    <header class="slide__header">
+      <div class="slide__header-title">Innovation Review · FY26 Q2</div>
+      <div class="slide__header-meta">
+        <div class="slide__page-num">25 <span style="opacity:0.5">/ 42</span></div>
+        <div class="slide__logos">
+          <img src="https://cdn.jsdelivr.net/gh/aromero-pnptc/pnp-skill-assets@main/logos/pnp-logo.svg" height="18" alt="PNP" style="opacity:0.55">
+          <img src="https://cdn.jsdelivr.net/gh/aromero-pnptc/pnp-skill-assets@main/logos/playbook-logo.svg" height="18" alt="Playbook" style="opacity:0.55">
+        </div>
+      </div>
+    </header>
+    <div class="slide__title-zone">
+      <div class="slide__purple-bar"></div>
+      <h1 class="slide__title">Before and after Playbook</h1>
+    </div>
+    <main class="slide__content">
+      <div class="content-zone">
+        <div class="ba">
+  <div class="ba__col ba__col--before">
+    <div class="ba__head">
+      <div class="ba__label">Before</div>
+      <div class="ba__tag">Without Playbook</div>
+    </div>
+    <div class="ba__metric-row">
+      <div class="ba__metric">4.5<span style="font-size:0.45em;letter-spacing:0;opacity:0.65"> mo</span></div>
+      <div class="ba__metric-label">Median time from brief to pilot launch</div>
+    </div>
+    <p class="ba__copy">Innovation teams spend months building startup longlist from scratch each cycle — duplicating effort, missing fast-movers, and burning team time on qualification calls.</p>
+    <ul class="ba__points">
+      <li>
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="8" stroke="currentColor" stroke-width="1.5"/><path d="M6 9l2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.4"/></svg>
+        Manual sourcing, 200+ unqualified inbounds per quarter
+      </li>
+      <li>
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="8" stroke="currentColor" stroke-width="1.5"/><path d="M6 9l2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.4"/></svg>
+        No standard pilot framework — each engagement re-invented
+      </li>
+      <li>
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="8" stroke="currentColor" stroke-width="1.5"/><path d="M6 9l2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.4"/></svg>
+        Impact data scattered, hard to report to the board
+      </li>
+    </ul>
+  </div>
+  <div class="ba__divider">
+    <div class="ba__divider-line"></div>
+    <div class="ba__divider-arrow">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </div>
+    <div class="ba__divider-line"></div>
+  </div>
+  <div class="ba__col ba__col--after">
+    <div class="ba__head">
+      <div class="ba__label">After</div>
+      <div class="ba__tag">With Playbook</div>
+    </div>
+    <div class="ba__metric-row">
+      <div class="ba__metric">34<span style="font-size:0.45em;letter-spacing:0;opacity:0.8"> days</span></div>
+      <div class="ba__metric-label">Average time from brief to pilot launch</div>
+    </div>
+    <p class="ba__copy">Pre-qualified dealflow lands weekly. Standard pilot templates cut legal and procurement overhead. Impact rolls up automatically to a board-ready quarterly report.</p>
+    <ul class="ba__points">
+      <li>
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="8" fill="rgba(255,255,255,0.2)"/><path d="M5.5 9l2.5 2.5 4.5-4.5" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        8–12 pre-cleared startups delivered every week
+      </li>
+      <li>
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="8" fill="rgba(255,255,255,0.2)"/><path d="M5.5 9l2.5 2.5 4.5-4.5" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Standard SOW, shared scoring, named owners
+      </li>
+      <li>
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="8" fill="rgba(255,255,255,0.2)"/><path d="M5.5 9l2.5 2.5 4.5-4.5" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Quarterly board report generated automatically
+      </li>
+    </ul>
+  </div>
+</div>
+      </div>
+    </main>
+  </div><!-- /slide__main -->
+  </div><!-- /slide -->
+</div>
+</body>
+</html>

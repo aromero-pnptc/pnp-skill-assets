@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>H2 2026 roadmap — Playbook mockup</title>
+  <link rel="stylesheet" href="playbook.css">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { width: 100%; height: 100%; background: #2a2a2a; display: flex; align-items: center; justify-content: center; }
+    .viewer { width: 1920px; height: 1080px; transform-origin: center center; }
+  </style>
+  <script>
+    function scale() {
+      const v = document.querySelector('.viewer');
+      v.style.transform = `scale(${Math.min(window.innerWidth/1920, window.innerHeight/1080)})`;
+    }
+    window.addEventListener('load', scale);
+    window.addEventListener('resize', scale);
+  </script>
+</head>
+<body>
+<div class="viewer">
+  <div class="slide">
+  <div class="slide__main">
+    <header class="slide__header">
+      <div class="slide__header-title">Innovation Review · FY26 Q2</div>
+      <div class="slide__header-meta">
+        <div class="slide__page-num">32 <span style="opacity:0.5">/ 42</span></div>
+        <div class="slide__logos">
+          <img src="https://cdn.jsdelivr.net/gh/aromero-pnptc/pnp-skill-assets@main/logos/pnp-logo.svg" height="18" alt="PNP" style="opacity:0.55">
+          <img src="https://cdn.jsdelivr.net/gh/aromero-pnptc/pnp-skill-assets@main/logos/playbook-logo.svg" height="18" alt="Playbook" style="opacity:0.55">
+        </div>
+      </div>
+    </header>
+    <div class="slide__title-zone">
+      <div class="slide__purple-bar"></div>
+      <h1 class="slide__title">H2 2026 roadmap</h1>
+    </div>
+    <main class="slide__content">
+      <div class="content-zone">
+        <div class="roadmap">
+  <div class="roadmap__head" style="grid-template-columns: 200px repeat(3, minmax(0,1fr))">
+    <div class="roadmap__corner"></div>
+    <div class="roadmap__period">Q3 2026</div>
+    <div class="roadmap__period">Q4 2026</div>
+    <div class="roadmap__period">Q1 2027</div>
+  </div>
+  <div class="roadmap__body">
+    <div class="roadmap__lane" style="grid-template-columns: 200px repeat(3, minmax(0,1fr))">
+      <div class="roadmap__lane-label">
+        <div class="roadmap__lane-name">AI Verticals</div>
+        <div class="roadmap__lane-owner">Product</div>
+      </div>
+      <div class="roadmap__cell"></div>
+      <div class="roadmap__cell"></div>
+      <div class="roadmap__cell"></div>
+      <div class="roadmap__item" data-status="shipped" style="grid-column:2; grid-row:1; align-self:center; height:52px">
+        <span class="roadmap__item-label">GenAI track launch</span>
+        <span class="roadmap__item-value">Done</span>
+      </div>
+      <div class="roadmap__item" data-status="in-flight" style="grid-column:3; grid-row:1; align-self:center; height:52px">
+        <span class="roadmap__item-label">Agentic scoring</span>
+        <span class="roadmap__item-value">Q4</span>
+      </div>
+      <div class="roadmap__item" data-status="planning" style="grid-column:4; grid-row:1; align-self:center; height:52px">
+        <span class="roadmap__item-label">Auto-brief generation</span>
+        <span class="roadmap__item-value">Q1</span>
+      </div>
+    </div>
+    <div class="roadmap__lane" style="grid-template-columns: 200px repeat(3, minmax(0,1fr))">
+      <div class="roadmap__lane-label">
+        <div class="roadmap__lane-name">Reporting</div>
+        <div class="roadmap__lane-owner">Platform</div>
+      </div>
+      <div class="roadmap__cell"></div>
+      <div class="roadmap__cell"></div>
+      <div class="roadmap__cell"></div>
+      <div class="roadmap__item" data-status="shipped" style="grid-column:2; grid-row:1; align-self:center; height:52px">
+        <span class="roadmap__item-label">Board report v2</span>
+        <span class="roadmap__item-value">Done</span>
+      </div>
+      <div class="roadmap__item" data-status="in-flight" style="grid-column:3; grid-row:1; align-self:center; height:52px">
+        <span class="roadmap__item-label">Live dashboard</span>
+        <span class="roadmap__item-value">Q4</span>
+      </div>
+      <div class="roadmap__item" data-status="planning" style="grid-column:4; grid-row:1; align-self:center; height:52px">
+        <span class="roadmap__item-label">Custom KPI builder</span>
+        <span class="roadmap__item-value">Q1</span>
+      </div>
+    </div>
+    <div class="roadmap__lane" style="grid-template-columns: 200px repeat(3, minmax(0,1fr))">
+      <div class="roadmap__lane-label">
+        <div class="roadmap__lane-name">Global Expansion</div>
+        <div class="roadmap__lane-owner">Business Dev</div>
+      </div>
+      <div class="roadmap__cell"></div>
+      <div class="roadmap__cell"></div>
+      <div class="roadmap__cell"></div>
+      <div class="roadmap__item" data-status="in-flight" style="grid-column:2; grid-row:1; align-self:center; height:52px">
+        <span class="roadmap__item-label">US cohort pilot</span>
+        <span class="roadmap__item-value">Q3</span>
+      </div>
+      <div class="roadmap__item" data-status="planning" style="grid-column:3; grid-row:1; align-self:center; height:52px">
+        <span class="roadmap__item-label">APAC launch</span>
+        <span class="roadmap__item-value">Q4</span>
+      </div>
+      <div class="roadmap__item" data-status="planning" style="grid-column:4; grid-row:1; align-self:center; height:52px">
+        <span class="roadmap__item-label">LATAM scoping</span>
+        <span class="roadmap__item-value">Q1</span>
+      </div>
+    </div>
+  </div>
+  <div class="roadmap__legend" style="padding-top:8px">
+    <div class="roadmap__legend-item"><div class="roadmap__swatch" data-status="shipped"></div> Shipped</div>
+    <div class="roadmap__legend-item"><div class="roadmap__swatch" data-status="in-flight"></div> In flight</div>
+    <div class="roadmap__legend-item"><div class="roadmap__swatch" data-status="planning"></div> Planning</div>
+  </div>
+</div>
+      </div>
+    </main>
+  </div><!-- /slide__main -->
+  </div><!-- /slide -->
+</div>
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Chart Donut — Playbook mockup</title>
+  <link rel="stylesheet" href="playbook.css">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { width: 100%; height: 100%; background: #2a2a2a; display: flex; align-items: center; justify-content: center; }
+    .viewer { width: 1920px; height: 1080px; transform-origin: center center; }
+  </style>
+  <script>
+    function scale() {
+      const v = document.querySelector('.viewer');
+      v.style.transform = `scale(${Math.min(window.innerWidth/1920, window.innerHeight/1080)})`;
+    }
+    window.addEventListener('load', scale);
+    window.addEventListener('resize', scale);
+  </script>
+</head>
+<body>
+<div class="viewer">
+  <div class="slide">
+  <div class="slide__main">
+    <header class="slide__header">
+      <div class="slide__header-title">Innovation Review · FY26 Q2</div>
+      <div class="slide__header-meta">
+        <div class="slide__page-num">23 <span style="opacity:0.5">/ 42</span></div>
+        <div class="slide__logos">
+          <img src="https://cdn.jsdelivr.net/gh/aromero-pnptc/pnp-skill-assets@main/logos/pnp-logo.svg" height="18" alt="PNP" style="opacity:0.55">
+          <img src="https://cdn.jsdelivr.net/gh/aromero-pnptc/pnp-skill-assets@main/logos/playbook-logo.svg" height="18" alt="Playbook" style="opacity:0.55">
+        </div>
+      </div>
+    </header>
+    <div class="slide__title-zone">
+      <div class="slide__purple-bar"></div>
+      <h1 class="slide__title">Dealflow by vertical · FY26 Q2</h1>
+    </div>
+    <main class="slide__content">
+      <div class="content-zone">
+        <div class="chart chart--donut">
+  <svg class="chart-donut__svg" viewBox="-5 -5 110 110">
+    <circle cx="50" cy="50" r="35" fill="white" stroke="none"/>
+    <!-- AI/ML 38% -->
+    <circle cx="50" cy="50" r="45" fill="none" stroke="#3333CC" stroke-width="18"
+      stroke-dasharray="107.4 174.9" stroke-dashoffset="0"
+      transform="rotate(-90 50 50)"/>
+    <!-- ClimateTech 22% -->
+    <circle cx="50" cy="50" r="45" fill="none" stroke="#3e9c74" stroke-width="18"
+      stroke-dasharray="62.2 220.5" stroke-dashoffset="-107.4"
+      transform="rotate(-90 50 50)"/>
+    <!-- FinTech 18% -->
+    <circle cx="50" cy="50" r="45" fill="none" stroke="#f3971a" stroke-width="18"
+      stroke-dasharray="50.9 231.8" stroke-dashoffset="-169.6"
+      transform="rotate(-90 50 50)"/>
+    <!-- HealthTech 14% -->
+    <circle cx="50" cy="50" r="45" fill="none" stroke="#1d2a57" stroke-width="18"
+      stroke-dasharray="39.6 243.1" stroke-dashoffset="-220.5"
+      transform="rotate(-90 50 50)"/>
+    <!-- Other 8% -->
+    <circle cx="50" cy="50" r="45" fill="none" stroke="#c6cedc" stroke-width="18"
+      stroke-dasharray="22.6 260.1" stroke-dashoffset="-260.1"
+      transform="rotate(-90 50 50)"/>
+  </svg>
+  <div class="chart-donut__legend">
+    <div class="chart-donut__row">
+      <div class="chart-donut__swatch" style="background:#3333CC"></div>
+      <div>
+        <div class="chart-donut__name">AI / ML</div>
+        <div class="chart-donut__pct">38% · 322 companies</div>
+      </div>
+    </div>
+    <div class="chart-donut__row">
+      <div class="chart-donut__swatch" style="background:#3e9c74"></div>
+      <div>
+        <div class="chart-donut__name">ClimateTech</div>
+        <div class="chart-donut__pct">22% · 186 companies</div>
+      </div>
+    </div>
+    <div class="chart-donut__row">
+      <div class="chart-donut__swatch" style="background:#f3971a"></div>
+      <div>
+        <div class="chart-donut__name">FinTech</div>
+        <div class="chart-donut__pct">18% · 153 companies</div>
+      </div>
+    </div>
+    <div class="chart-donut__row">
+      <div class="chart-donut__swatch" style="background:#1d2a57"></div>
+      <div>
+        <div class="chart-donut__name">HealthTech</div>
+        <div class="chart-donut__pct">14% · 119 companies</div>
+      </div>
+    </div>
+    <div class="chart-donut__row">
+      <div class="chart-donut__swatch" style="background:#c6cedc"></div>
+      <div>
+        <div class="chart-donut__name">Other</div>
+        <div class="chart-donut__pct">8% · 67 companies</div>
+      </div>
+    </div>
+  </div>
+</div>
+      </div>
+    </main>
+  </div><!-- /slide__main -->
+  </div><!-- /slide -->
+</div>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>What our partners say — Playbook mockup</title>
+  <link rel="stylesheet" href="playbook.css">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { width: 100%; height: 100%; background: #2a2a2a; display: flex; align-items: center; justify-content: center; }
+    .viewer { width: 1920px; height: 1080px; transform-origin: center center; }
+  </style>
+  <script>
+    function scale() {
+      const v = document.querySelector('.viewer');
+      v.style.transform = `scale(${Math.min(window.innerWidth/1920, window.innerHeight/1080)})`;
+    }
+    window.addEventListener('load', scale);
+    window.addEventListener('resize', scale);
+  </script>
+</head>
+<body>
+<div class="viewer">
+  <div class="slide">
+  <div class="slide__main">
+    <header class="slide__header">
+      <div class="slide__header-title">Innovation Review · FY26 Q2</div>
+      <div class="slide__header-meta">
+        <div class="slide__page-num">30 <span style="opacity:0.5">/ 42</span></div>
+        <div class="slide__logos">
+          <img src="https://cdn.jsdelivr.net/gh/aromero-pnptc/pnp-skill-assets@main/logos/pnp-logo.svg" height="18" alt="PNP" style="opacity:0.55">
+          <img src="https://cdn.jsdelivr.net/gh/aromero-pnptc/pnp-skill-assets@main/logos/playbook-logo.svg" height="18" alt="Playbook" style="opacity:0.55">
+        </div>
+      </div>
+    </header>
+    <div class="slide__title-zone">
+      <div class="slide__purple-bar"></div>
+      <h1 class="slide__title">What our partners say</h1>
+    </div>
+    <main class="slide__content">
+      <div class="content-zone">
+        <div class="testimonial">
+  <div class="testimonial__quote-side">
+    <div class="testimonial__mark" aria-hidden="true">"</div>
+    <blockquote class="testimonial__quote">
+      Playbook cut our time-to-pilot from six months to five weeks. More importantly, it gave our board a language for measuring innovation that didn't exist before.
+    </blockquote>
+    <div class="testimonial__byline">
+      <div class="testimonial__rule"></div>
+      <div class="testimonial__byline-text">
+        <strong>Isabelle Fontaine</strong>
+        <span>Chief Innovation Officer · Groupe Meridian</span>
+      </div>
+    </div>
+  </div>
+  <div class="testimonial__portrait-side">
+    <div class="testimonial__portrait" style="background:#e5e9f0">
+      <div class="testimonial__initials">IF</div>
+    </div>
+    <div class="testimonial__company">
+      <div class="testimonial__company-label">Company</div>
+      <div class="testimonial__company-name">Groupe Meridian</div>
+    </div>
+  </div>
+</div>
+      </div>
+    </main>
+  </div><!-- /slide__main -->
+  </div><!-- /slide -->
+</div>
+</body>
+</html>

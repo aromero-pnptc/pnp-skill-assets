@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pilot evaluation · Aurelia AI — Playbook mockup</title>
+  <link rel="stylesheet" href="playbook.css">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { width: 100%; height: 100%; background: #2a2a2a; display: flex; align-items: center; justify-content: center; }
+    .viewer { width: 1920px; height: 1080px; transform-origin: center center; }
+  </style>
+  <script>
+    function scale() {
+      const v = document.querySelector('.viewer');
+      v.style.transform = `scale(${Math.min(window.innerWidth/1920, window.innerHeight/1080)})`;
+    }
+    window.addEventListener('load', scale);
+    window.addEventListener('resize', scale);
+  </script>
+</head>
+<body>
+<div class="viewer">
+  <div class="slide">
+  <div class="slide__main">
+    <header class="slide__header">
+      <div class="slide__header-title">Innovation Review · FY26 Q2</div>
+      <div class="slide__header-meta">
+        <div class="slide__page-num">27 <span style="opacity:0.5">/ 42</span></div>
+        <div class="slide__logos">
+          <img src="https://cdn.jsdelivr.net/gh/aromero-pnptc/pnp-skill-assets@main/logos/pnp-logo.svg" height="18" alt="PNP" style="opacity:0.55">
+          <img src="https://cdn.jsdelivr.net/gh/aromero-pnptc/pnp-skill-assets@main/logos/playbook-logo.svg" height="18" alt="Playbook" style="opacity:0.55">
+        </div>
+      </div>
+    </header>
+    <div class="slide__title-zone">
+      <div class="slide__purple-bar"></div>
+      <h1 class="slide__title">Pilot evaluation · Aurelia AI</h1>
+    </div>
+    <main class="slide__content">
+      <div class="content-zone">
+        <div class="scorecard">
+  <div class="scorecard__rows">
+    <div class="scorecard__row">
+      <div class="scorecard__label">Technical fit</div>
+      <div class="scorecard__track">
+        <div class="scorecard__fill" style="width:90%">
+          <div class="scorecard__pill">9</div>
+        </div>
+      </div>
+      <div class="scorecard__denom">/ 10</div>
+    </div>
+    <div class="scorecard__row">
+      <div class="scorecard__label">Strategic alignment</div>
+      <div class="scorecard__track">
+        <div class="scorecard__fill" style="width:80%">
+          <div class="scorecard__pill">8</div>
+        </div>
+      </div>
+      <div class="scorecard__denom">/ 10</div>
+    </div>
+    <div class="scorecard__row">
+      <div class="scorecard__label">Team quality</div>
+      <div class="scorecard__track">
+        <div class="scorecard__fill" style="width:90%">
+          <div class="scorecard__pill">9</div>
+        </div>
+      </div>
+      <div class="scorecard__denom">/ 10</div>
+    </div>
+    <div class="scorecard__row">
+      <div class="scorecard__label">Market traction</div>
+      <div class="scorecard__track">
+        <div class="scorecard__fill" data-tier="mid" style="width:70%">
+          <div class="scorecard__pill" data-tier="mid">7</div>
+        </div>
+      </div>
+      <div class="scorecard__denom">/ 10</div>
+    </div>
+    <div class="scorecard__row">
+      <div class="scorecard__label">Implementation risk</div>
+      <div class="scorecard__track">
+        <div class="scorecard__fill" data-tier="mid" style="width:60%">
+          <div class="scorecard__pill" data-tier="mid">6</div>
+        </div>
+      </div>
+      <div class="scorecard__denom">/ 10</div>
+    </div>
+  </div>
+  <div class="scorecard__divider"></div>
+  <div class="scorecard__overall">
+    <div class="scorecard__label">Overall score</div>
+    <div class="scorecard__total">40 <span class="scorecard__total-denom">/ 50</span></div>
+  </div>
+</div>
+      </div>
+    </main>
+  </div><!-- /slide__main -->
+  </div><!-- /slide -->
+</div>
+</body>
+</html>
